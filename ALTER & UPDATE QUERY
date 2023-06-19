@@ -1,0 +1,7 @@
+alter table student add location varchar(200);
+
+update student set location='cbe' where Id='1';
+update student set location='chennai' where Id='2';
+update student set location='karur' where Id='3';
+update student set location='nagai' where Id='4';
+update student set location='kerala' where Id='5';
