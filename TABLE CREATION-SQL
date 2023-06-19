@@ -1,3 +1,4 @@
+create database student_details;
 CREATE TABLE student(Id integer, Name varchar(200),age integer);
 
 INSERT INTO student VALUES(1,'jana','15');
