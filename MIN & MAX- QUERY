@@ -1,0 +1,2 @@
+SELECT MIN(Id) FROM student;
+SELECT MAX(Id) FROM student;
