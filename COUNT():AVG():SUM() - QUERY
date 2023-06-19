@@ -1,0 +1,3 @@
+SELECT COUNT(Id) FROM student;
+SELECT avg(Id) FROM student;
+SELECT sum(Id) FROM student;
