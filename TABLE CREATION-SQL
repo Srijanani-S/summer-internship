@@ -1,0 +1,7 @@
+CREATE TABLE student(Id integer, Name varchar(200),age integer);
+
+INSERT INTO student VALUES(1,'jana','15');
+INSERT INTO student VALUES(2,'kumar','16');
+INSERT INTO student VALUES(3,'sanj','17');
+INSERT INTO student VALUES(4,'Jane','18');
+INSERT INTO student VALUES(5,'Rob','19');
