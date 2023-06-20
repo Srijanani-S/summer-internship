@@ -1,0 +1,39 @@
+RIGHT JOIN:The RIGHT JOIN keyword returns all records from the right table (table2), and the matching records from the left table (table1)
+
+SYNATX:
+     SELECT column_name(s) FROM table1 RIGHT JOIN table2 ON table1.column_name = table2.column_name;
+     
+EXAMPLE:
+ TABLE1
+ select * from student;
++------+-------+-----------------+------+----------+
+| id   | name  | email           | dept | location |
++------+-------+-----------------+------+----------+
+|   18 | jana  | jana@gmail.com  | cse  | cbe      |
+|   19 | sanj  | sanj@gmail.com  | eee  | cbe      |
+|   20 | kiru  | kiru@gmail.com  | ece  | chennai  |
+|   21 | kumar | kumar@gmail.com | cce  | madurai  |
++------+-------+-----------------+------+----------+
+
+TABLE2:
+ select * from staff;
++------+-----------+---------+------+
+| id   | last_name | phn_num | age  |
++------+-----------+---------+------+
+|   18 | beni      |   12345 |   20 |
+|   19 | jack      |   12456 |   21 |
+|   25 | jeni      |   12457 |   22 |
+|   10 | jessi     |   12458 |   22 |
++------+-----------+---------+------+
+
+RIGHT JOIN QUERY:
+   select * from student right join staff on student.id=staff.id;
++------+------+----------------+------+----------+------+-----------+---------+------+
+| id   | name | email          | dept | location | id   | last_name | phn_num | age  |
++------+------+----------------+------+----------+------+-----------+---------+------+
+|   18 | jana | jana@gmail.com | cse  | cbe      |   18 | beni      |   12345 |   20 |
+|   19 | sanj | sanj@gmail.com | eee  | cbe      |   19 | jack      |   12456 |   21 |
+| NULL | NULL | NULL           | NULL | NULL     |   25 | jeni      |   12457 |   22 |
+| NULL | NULL | NULL           | NULL | NULL     |   10 | jessi     |   12458 |   22 |
++------+------+----------------+------+----------+------+-----------+---------+------+
+     
