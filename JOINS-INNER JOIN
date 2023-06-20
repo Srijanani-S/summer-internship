@@ -1,0 +1,34 @@
+ INNER JOIN : The INNER JOIN keyword selects records that have matching values in both tables.
+ 
+ SYNTAX:
+     SELECT column_name(s) FROM table1 INNER JOIN table2 ON table1.column_name = table2.column_name;
+ 
+ select * from student;
++------+-------+-----------------+------+----------+
+| id   | name  | email           | dept | location |
++------+-------+-----------------+------+----------+
+|   18 | jana  | jana@gmail.com  | cse  | cbe      |
+|   19 | sanj  | sanj@gmail.com  | eee  | cbe      |
+|   20 | kiru  | kiru@gmail.com  | ece  | chennai  |
+|   21 | kumar | kumar@gmail.com | cce  | madurai  |
++------+-------+-----------------+------+----------+
+
+
+ select * from staff;
++------+-----------+---------+------+
+| id   | last_name | phn_num | age  |
++------+-----------+---------+------+
+|   18 | beni      |   12345 |   20 |
+|   19 | jack      |   12456 |   21 |
+|   25 | jeni      |   12457 |   22 |
+|   10 | jessi     |   12458 |   22 |
++------+-----------+---------+------+
+
+INNER JOIN:
+select * from student inner join staff on student.id=staff.id;
+ +------+------+----------------+------+----------+------+-----------+---------+------+
+| id   | name | email          | dept | location | id   | last_name | phn_num | age  |
++------+------+----------------+------+----------+------+-----------+---------+------+
+|   18 | jana | jana@gmail.com | cse  | cbe      |   18 | beni      |   12345 |   20 |
+|   19 | sanj | sanj@gmail.com | eee  | cbe      |   19 | jack      |   12456 |   21 |
++------+------+----------------+------+----------+------+-----------+---------+------+
