@@ -1,0 +1,39 @@
+LEFT JOIN:The LEFT JOIN keyword returns all records from the left table (table1), and the matching records from the right table (table2)
+
+SYNATX:
+     SELECT column_name(s) FROM table1 LEFT JOIN table2 ON table1.column_name = table2.column_name;
+     
+EXAMPLE:
+
+TABLE1-student:  
+mysql> select * from student;
++------+-------+-----------------+------+---------+----------+
+| id   | name  | email           | dept | phn_num | location |
++------+-------+-----------------+------+---------+----------+
+|   18 | jana  | jana@gmail.com  | cse  |    NULL | cbe      |
+|   19 | sanj  | sanj@gmail.com  | eee  |    NULL | cbe      |
+|   20 | kiru  | kiru@gmail.com  | ece  |    NULL | chennai  |
+|   21 | kumar | kumar@gmail.com | cce  |    NULL | madurai  |
++------+-------+-----------------+------+---------+----------+
+
+table2-staff:
+mysql> select * from student;
++------+-------+-----------------+------+----------+
+| id   | name  | email           | dept | location |
++------+-------+-----------------+------+----------+
+|   18 | jana  | jana@gmail.com  | cse  | cbe      |
+|   19 | sanj  | sanj@gmail.com  | eee  | cbe      |
+|   20 | kiru  | kiru@gmail.com  | ece  | chennai  |
+|   21 | kumar | kumar@gmail.com | cce  | madurai  |
++------+-------+-----------------+------+----------+
+
+LEFT JOIN:
+mysql> select * from student left join staff on student.id=staff.id;
++------+-------+-----------------+------+----------+------+-----------+---------+------+
+| id   | name  | email           | dept | location | id   | last_name | phn_num | age  |
++------+-------+-----------------+------+----------+------+-----------+---------+------+
+|   18 | jana  | jana@gmail.com  | cse  | cbe      |   18 | beni      |   12345 |   20 |
+|   19 | sanj  | sanj@gmail.com  | eee  | cbe      |   19 | jack      |   12456 |   21 |
+|   20 | kiru  | kiru@gmail.com  | ece  | chennai  | NULL | NULL      |    NULL | NULL |
+|   21 | kumar | kumar@gmail.com | cce  | madurai  | NULL | NULL      |    NULL | NULL |
++------+-------+-----------------+------+----------+------+-----------+---------+------+
