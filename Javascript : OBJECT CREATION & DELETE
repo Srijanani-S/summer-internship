@@ -1,0 +1,16 @@
+//creating odject
+const user=
+{
+    name: 'sanj',age:20,email:'jan2004',dept:'cse'
+};
+user.sub='maths';
+console.log(user);
+
+//delete
+const user1=
+{
+    name: 'sanj',age:20,email:'jan2004',dept:'cse'
+};
+user1.sub='maths';
+delete user1.sub;
+console.log(user1);
