@@ -1,0 +1,15 @@
+//defined
+let x="sanj";
+console.log(x);
+//undefined
+let y;
+console.log(y);
+
+//null
+let z=null;
+console.log(z);
+
+
+//undefined
+console.log(s);
+var s='xy';
